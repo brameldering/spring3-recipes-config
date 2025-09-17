@@ -12,7 +12,7 @@ management:
             probes:
                 enabled: true
         prometheus:
-            enabled: true
+            access: true
     endpoints:
         web:
             exposure:
