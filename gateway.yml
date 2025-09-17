@@ -18,6 +18,12 @@ spring:
               - Path=/api/albums/**
             filters:
               - StripPrefix=1
+          - id: admin
+            uri: lb://admin-server
+            predicates:
+              - Path=/admin/**
+            filters:
+              - StripPrefix=1
 eureka:
   client:
     service-url:
