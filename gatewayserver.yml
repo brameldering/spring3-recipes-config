@@ -7,12 +7,14 @@ spring:
         - id: players
           uri: ${PLAYERS_URI:lb://football}
           predicates:
+            - Path=/api/players
             - Path=/api/players/**
           filters:
             - StripPrefix=1
         - id: albums
           uri: ${ALBUMS_URI:lb://albums}
           predicates:
+            - Path=/api/albums
             - Path=/api/albums/**
           filters:
             - StripPrefix=1
